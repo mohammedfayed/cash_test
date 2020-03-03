@@ -1,0 +1,39 @@
+#include<cs50.h>
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+    int counter =0 ;
+    float x = get_float("change own: ");
+    if(x<=0)
+    {
+        x = get_float("change own: ");
+    }
+    else
+    {
+         int coins = round(x * 100);
+    }
+    while(coins >= 25)
+    {
+        counter = counter + 1;
+        coins = coins - 25;   
+    }
+    while(coins >= 10)
+    {
+        counter = counter + 1;
+        coins = coins - 10;
+    }
+    while(coins >= 5)
+    {
+        counter = counter + 1;
+        coins = coins - 5;
+    }
+    while(coins >= 1)
+    {
+        counter = counter + 1;
+        coins = coins - 1;
+    }
+    printf("%d",counter);
+    return 0;
+}
